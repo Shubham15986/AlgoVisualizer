@@ -20,6 +20,7 @@ import logo from "/public/logo.jpg";
 import { FaXTwitter } from "react-icons/fa6";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { navigationLinks, resourceLinks, socialLinks, techPills } from "../utils/footerData";
 
 // Sub-component for rendering footer links
 const FooterLink = ({ to, icon: Icon, children }) => (
@@ -172,11 +173,12 @@ const Footer = () => {
     }, 1000);
   };
 
+
   // Navigation links data
   const navigationLinks = [
     { to: "/", icon: FaRocket, label: "Home" },
     { to: "/data-structures", icon: FaCode, label: "Algorithms" },
-    { to: "/data-structures", icon: FaGraduationCap, label: "Data Structures" },
+    { to: "/data-structures-docs", icon: FaGraduationCap, label: "Data Structures" },
     { to: "/about", icon: FaGraduationCap, label: "About Us" },
     { to: "/contact", icon: FaEnvelope, label: "Contact" },
   ];
@@ -207,6 +209,22 @@ const Footer = () => {
     { href: "https://d3js.org/", label: "D3.js" },
     { href: "https://nodejs.org/", label: "Node.js" },
   ];
+
+  // Icon mapping helper
+  const getIconComponent = (iconName) => {
+    const iconMap = {
+      "FaRocket": FaRocket,
+      "FaCode": FaCode,
+      "FaGraduationCap": FaGraduationCap,
+      "FaEnvelope": FaEnvelope,
+      "FaGithub": FaGithub,
+      "FaLinkedin": FaLinkedin,
+      "FaXTwitter": FaXTwitter,
+      "FaDiscord": FaDiscord,
+      "FaYoutube": FaYoutube,
+    };
+    return iconMap[iconName] || FaGraduationCap;
+  };
 
   return (
     <>
@@ -273,7 +291,11 @@ const Footer = () => {
             <h3 className="column-title">Navigate</h3>
             <ul className="footer-links">
               {navigationLinks.map((link, index) => (
-                <FooterLink key={index} to={link.to} icon={link.icon}>
+                <FooterLink 
+                  key={index} 
+                  to={link.to} 
+                  icon={getIconComponent(link.icon)}
+                >
                   {link.label}
                 </FooterLink>
               ))}
@@ -290,7 +312,11 @@ const Footer = () => {
             <h3 className="column-title">Resources</h3>
             <ul className="footer-links">
               {resourceLinks.map((link, index) => (
-                <FooterLink key={index} to={link.to} icon={link.icon}>
+                <FooterLink 
+                  key={index} 
+                  to={link.to} 
+                  icon={getIconComponent(link.icon)}
+                >
                   {link.label}
                 </FooterLink>
               ))}
@@ -323,7 +349,7 @@ const Footer = () => {
                 <SocialLink
                   key={index}
                   href={link.href}
-                  icon={link.icon}
+                  icon={getIconComponent(link.icon)}
                   title={link.title}
                 />
               ))}

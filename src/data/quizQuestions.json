@@ -1258,5 +1258,1086 @@
         ],
         "correctAnswer": 3,
         "explanation": "Binary Tree is often less efficient due to multiple factors like higher time complexity, space usage, and lack of adaptability."
+    },
+    {
+        "id": 85,
+        "topic": "Other Topics",
+        "algorithm": "Hashing",
+        "difficulty": "Easy",
+        "question": "What is the main purpose of hashing?",
+        "options": [
+            "Store data sequentially",
+            "Map data to fixed-size values for fast access",
+            "Sort data efficiently",
+            "Compress data to smaller size"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Hashing maps arbitrary-sized data to fixed-size values (hash codes) to allow fast insertion, deletion, and lookup."
+    },
+    {
+        "id": 86,
+        "topic": "Other Topics",
+        "algorithm": "Hashing",
+        "difficulty": "Easy",
+        "question": "Which data structure commonly uses hashing for fast access?",
+        "options": [
+            "Array",
+            "Linked List",
+            "Hash Table",
+            "Stack"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Hash tables use hashing to map keys to indices, allowing O(1) average-time lookup."
+    },
+    {
+        "id": 87,
+        "topic": "Other Topics",
+        "algorithm": "Hashing",
+        "difficulty": "Medium",
+        "question": "Which of the following is a collision resolution technique in hashing?",
+        "options": [
+            "Binary Search",
+            "Chaining",
+            "Heapify",
+            "Merge Sort"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Chaining is used to store multiple elements at the same index in case of a collision."
+    },
+    {
+        "id": 88,
+        "topic": "Other Topics",
+        "algorithm": "Hashing",
+        "difficulty": "Medium",
+        "question": "What is a hash function?",
+        "options": [
+            "A function that sorts elements",
+            "A function that maps keys to integer indices",
+            "A function that compares two arrays",
+            "A function that computes factorial"
+        ],
+        "correctAnswer": 1,
+        "explanation": "A hash function converts a key into an integer index for storage in a hash table."
+    },
+    {
+        "id": 89,
+        "topic": "Other Topics",
+        "algorithm": "Hashing",
+        "difficulty": "Hard",
+        "question": "Why is the choice of a good hash function important?",
+        "options": [
+            "To ensure fewer collisions and uniform distribution",
+            "To make the table smaller",
+            "To sort the keys automatically",
+            "To compress data efficiently"
+        ],
+        "correctAnswer": 0,
+        "explanation": "A good hash function reduces collisions and distributes keys uniformly, ensuring O(1) performance."
+    },
+    {
+        "id": 90,
+        "topic": "Other Topics",
+        "algorithm": "Hashing",
+        "difficulty": "Hard",
+        "question": "What can happen if all keys hash to the same index?",
+        "options": [
+            "The hash table becomes empty",
+            "The hash table degenerates into a linked list",
+            "The hash table sorts automatically",
+            "Nothing significant"
+        ],
+        "correctAnswer": 1,
+        "explanation": "If all keys collide to the same index, chaining will make a long list, degrading performance to O(n)."
+    },
+    {
+        "id": 91,
+        "topic": "Other Topics",
+        "algorithm": "Hash Table",
+        "difficulty": "Easy",
+        "question": "What is stored at each index of a hash table?",
+        "options": [
+            "Elements or key-value pairs",
+            "Only keys",
+            "Only indices",
+            "Sorted arrays"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Each index of a hash table stores elements, usually as key-value pairs."
+    },
+    {
+        "id": 92,
+        "topic": "Other Topics",
+        "algorithm": "Hash Table",
+        "difficulty": "Easy",
+        "question": "Hash tables provide which average time complexity for search operations?",
+        "options": [
+            "O(n)",
+            "O(log n)",
+            "O(1)",
+            "O(n log n)"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Search in hash tables is O(1) on average due to direct mapping by hash codes."
+    },
+    {
+        "id": 93,
+        "topic": "Other Topics",
+        "algorithm": "Hash Table",
+        "difficulty": "Medium",
+        "question": "Which of the following affects hash table performance?",
+        "options": [
+            "Load factor",
+            "Hash function quality",
+            "Collision resolution technique",
+            "All of the above"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Load factor, hash function, and collision resolution all impact hash table efficiency."
+    },
+    {
+        "id": 94,
+        "topic": "Other Topics",
+        "algorithm": "Hash Table",
+        "difficulty": "Medium",
+        "question": "What happens when the load factor exceeds a threshold in a hash table?",
+        "options": [
+            "The table resizes",
+            "Elements are deleted",
+            "The hash function changes",
+            "Nothing"
+        ],
+        "correctAnswer": 0,
+        "explanation": "When the load factor is high, the table is resized to reduce collisions and maintain O(1) performance."
+    },
+    {
+        "id": 95,
+        "topic": "Other Topics",
+        "algorithm": "Hash Table",
+        "difficulty": "Hard",
+        "question": "Worst-case time complexity of search in a hash table using chaining is?",
+        "options": [
+            "O(1)",
+            "O(log n)",
+            "O(n)",
+            "O(n log n)"
+        ],
+        "correctAnswer": 2,
+        "explanation": "In the worst case, all keys hash to the same index, forming a list of size n, giving O(n) search time."
+    },
+    {
+        "id": 96,
+        "topic": "Other Topics",
+        "algorithm": "Hash Table",
+        "difficulty": "Hard",
+        "question": "Which of the following is NOT a valid collision resolution technique?",
+        "options": [
+            "Chaining",
+            "Linear probing",
+            "Heap sort",
+            "Double hashing"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Heap sort is unrelated to collision resolution in hash tables."
+    },
+    {
+        "id": 97,
+        "topic": "Other Topics",
+        "algorithm": "chainingHash",
+        "difficulty": "Easy",
+        "question": "In chaining, where are colliding elements stored?",
+        "options": [
+            "In a separate hash table",
+            "In a linked list at the same index",
+            "In a stack",
+            "In an array sorted by key"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Chaining stores multiple colliding elements in a linked list at the same table index."
+    },
+    {
+        "id": 98,
+        "topic": "Other Topics",
+        "algorithm": "chainingHash",
+        "difficulty": "Easy",
+        "question": "Which data structure is commonly used in chaining?",
+        "options": [
+            "Queue",
+            "Linked List",
+            "Binary Tree",
+            "Heap"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Linked lists are used at each index to store multiple colliding elements."
+    },
+    {
+        "id": 99,
+        "topic": "Other Topics",
+        "algorithm": "chainingHash",
+        "difficulty": "Medium",
+        "question": "What is the average search complexity in chaining with a low load factor?",
+        "options": [
+            "O(1)",
+            "O(log n)",
+            "O(n)",
+            "O(n log n)"
+        ],
+        "correctAnswer": 0,
+        "explanation": "With a low load factor, most indices have very few elements, giving O(1) average search time."
+    },
+    {
+        "id": 100,
+        "topic": "Other Topics",
+        "algorithm": "chainingHash",
+        "difficulty": "Medium",
+        "question": "If a hash table uses chaining and all keys hash to the same index, what is the worst-case search time?",
+        "options": [
+            "O(1)",
+            "O(log n)",
+            "O(n)",
+            "O(n^2)"
+        ],
+        "correctAnswer": 2,
+        "explanation": "All keys in one linked list give O(n) search in the worst case."
+    },
+    {
+        "id": 101,
+        "topic": "Other Topics",
+        "algorithm": "chainingHash",
+        "difficulty": "Hard",
+        "question": "Which of the following improves search efficiency in chaining?",
+        "options": [
+            "Using balanced BSTs instead of linked lists",
+            "Increasing table size",
+            "Reducing load factor",
+            "All of the above"
+        ],
+        "correctAnswer": 3,
+        "explanation": "All options help: BSTs improve lookup, larger table reduces collisions, lower load factor reduces chain length."
+    },
+    {
+        "id": 102,
+        "topic": "Other Topics",
+        "algorithm": "chainingHash",
+        "difficulty": "Hard",
+        "question": "Which is a disadvantage of chaining?",
+        "options": [
+            "Wastes memory due to pointers",
+            "Cannot handle collisions",
+            "Always slower than open addressing",
+            "Does not allow deletion"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Chaining requires extra memory for pointers in linked lists, which is a trade-off for simpler collision handling."
+    },
+    {
+        "id": 103,
+        "topic": "Other Topics",
+        "algorithm": "Open Addressing",
+        "difficulty": "Easy",
+        "question": "In open addressing, where is a colliding element stored?",
+        "options": [
+            "In a linked list",
+            "In another empty table slot",
+            "At the same index",
+            "In a separate array"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Open addressing finds another empty slot in the table to store the colliding element."
+    },
+    {
+        "id": 104,
+        "topic": "Other Topics",
+        "algorithm": "Open Addressing",
+        "difficulty": "Easy",
+        "question": "Which is NOT an open addressing method?",
+        "options": [
+            "Linear probing",
+            "Quadratic probing",
+            "Double hashing",
+            "Chaining"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Chaining is a separate collision handling technique, not open addressing."
+    },
+    {
+        "id": 105,
+        "topic": "Other Topics",
+        "algorithm": "Open Addressing",
+        "difficulty": "Medium",
+        "question": "What is primary clustering in open addressing?",
+        "options": [
+            "When multiple elements hash to the same index",
+            "When clusters of occupied slots form, slowing insert/search",
+            "When the hash table resizes",
+            "When hash function fails"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Primary clustering occurs when clusters of consecutive occupied slots form, increasing probe length."
+    },
+    {
+        "id": 106,
+        "topic": "Other Topics",
+        "algorithm": "Open Addressing",
+        "difficulty": "Medium",
+        "question": "What is the average search complexity of open addressing with low load factor?",
+        "options": [
+            "O(n)",
+            "O(log n)",
+            "O(1)",
+            "O(n log n)"
+        ],
+        "correctAnswer": 2,
+        "explanation": "With a low load factor, most searches find their element quickly, giving O(1) average complexity."
+    },
+    {
+        "id": 107,
+        "topic": "Other Topics",
+        "algorithm": "Open Addressing",
+        "difficulty": "Hard",
+        "question": "What is the worst-case search time in open addressing?",
+        "options": [
+            "O(1)",
+            "O(log n)",
+            "O(n)",
+            "O(n log n)"
+        ],
+        "correctAnswer": 2,
+        "explanation": "If all elements form a cluster or table is nearly full, worst-case search can take O(n)."
+    },
+    {
+        "id": 108,
+        "topic": "Other Topics",
+        "algorithm": "Open Addressing",
+        "difficulty": "Hard",
+        "question": "Which of these helps reduce clustering in open addressing?",
+        "options": [
+            "Linear probing",
+            "Quadratic probing or double hashing",
+            "Always resizing table",
+            "Using linked lists"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Quadratic probing and double hashing reduce clustering by spreading keys more uniformly."
+    },
+    {
+        "id": 109,
+        "topic": "Other Topics",
+        "algorithm": "Rolling Hash",
+        "difficulty": "Easy",
+        "question": "Rolling hash is used primarily in which type of algorithms?",
+        "options": [
+            "Sorting algorithms",
+            "Substring search algorithms",
+            "Graph traversal algorithms",
+            "Dynamic programming"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Rolling hash allows fast substring search, used in algorithms like Rabin-Karp."
+    },
+    {
+        "id": 110,
+        "topic": "Other Topics",
+        "algorithm": "Rolling Hash",
+        "difficulty": "Easy",
+        "question": "What is the advantage of rolling hash over normal hash in string matching?",
+        "options": [
+            "Faster hash recomputation when sliding window",
+            "No collisions",
+            "Uses less memory",
+            "Automatically sorts substrings"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Rolling hash lets you compute the next hash by updating the previous one, avoiding full recomputation."
+    },
+    {
+        "id": 111,
+        "topic": "Other Topics",
+        "algorithm": "Rolling Hash",
+        "difficulty": "Medium",
+        "question": "Which problem is solved efficiently using rolling hash?",
+        "options": [
+            "Merge Sort",
+            "Rabin-Karp string search",
+            "DFS on trees",
+            "Binary search"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Rabin-Karp uses rolling hash for fast substring matching."
+    },
+    {
+        "id": 112,
+        "topic": "Other Topics",
+        "algorithm": "Rolling Hash",
+        "difficulty": "Medium",
+        "question": "What is the time complexity of substring search using Rabin-Karp with rolling hash?",
+        "options": [
+            "O(N × M)",
+            "O(N + M)",
+            "O(N log M)",
+            "O(1)"
+        ],
+        "correctAnswer": 1,
+        "explanation": "With rolling hash, Rabin-Karp runs in O(N + M) average time for pattern matching."
+    },
+    {
+        "id": 113,
+        "topic": "Other Topics",
+        "algorithm": "Rolling Hash",
+        "difficulty": "Hard",
+        "question": "Which property of rolling hash is critical for efficient substring matching?",
+        "options": [
+            "Incremental hash computation",
+            "No collisions",
+            "Sorting substrings",
+            "Dynamic memory allocation"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Incremental update of hash values enables efficient sliding window substring search."
+    },
+    {
+        "id": 114,
+        "topic": "Other Topics",
+        "algorithm": "Rolling Hash",
+        "difficulty": "Hard",
+        "question": "Which problem arises if the rolling hash is not designed carefully?",
+        "options": [
+            "Increased memory usage",
+            "Hash collisions causing false positives",
+            "Slower sorting",
+            "Unable to store keys"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Poor hash design can cause collisions, resulting in false matches during substring search."
+    },
+    {
+        "id": 115,
+        "topic": "Other Topics",
+        "algorithm": "Hash - Applications",
+        "difficulty": "Easy",
+        "question": "Which of the following is a common use of hashing?",
+        "options": [
+            "Sorting arrays",
+            "Finding duplicates",
+            "DFS traversal",
+            "Dynamic programming"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Hashing is often used to find duplicates efficiently using sets or hash maps."
+    },
+    {
+        "id": 116,
+        "topic": "Other Topics",
+        "algorithm": "Hash - Applications",
+        "difficulty": "Easy",
+        "question": "Which data structure is typically implemented using hashing?",
+        "options": [
+            "Queue",
+            "Stack",
+            "Map or Dictionary",
+            "Binary Tree"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Maps or dictionaries use hashing to map keys to values with O(1) access."
+    },
+    {
+        "id": 117,
+        "topic": "Other Topics",
+        "algorithm": "Hash - Applications",
+        "difficulty": "Medium",
+        "question": "Hashing is often used in which common algorithmic problem?",
+        "options": [
+            "Two-sum problem",
+            "Merge sort",
+            "Binary search",
+            "DFS traversal"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Hashing allows checking complements efficiently, solving the two-sum problem in O(n) time."
+    },
+    {
+        "id": 118,
+        "topic": "Other Topics",
+        "algorithm": "Hash - Applications",
+        "difficulty": "Medium",
+        "question": "Which application benefits from counting frequencies using hashing?",
+        "options": [
+            "Finding duplicates",
+            "Word frequency in documents",
+            "Histogram generation",
+            "All of the above"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Hashing can efficiently count frequencies for all these applications."
+    },
+    {
+        "id": 119,
+        "topic": "Other Topics",
+        "algorithm": "Hash - Applications",
+        "difficulty": "Hard",
+        "question": "Which problem requires careful hash function design to avoid collisions?",
+        "options": [
+            "Counting frequencies",
+            "Two-sum problem",
+            "Substring matching",
+            "All of the above"
+        ],
+        "correctAnswer": 3,
+        "explanation": "All listed problems can be impacted by hash collisions, requiring good hash functions."
+    },
+    {
+        "id": 120,
+        "topic": "Other Topics",
+        "algorithm": "Hash - Applications",
+        "difficulty": "Hard",
+        "question": "Which of these algorithms heavily rely on hashing?",
+        "options": [
+            "Rabin-Karp string search",
+            "Frequency counter in data streams",
+            "Hash-based caches and memoization",
+            "All of the above"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Hashing is crucial in substring search, frequency counting, and cache/memoization implementations."
     }
+    , 
+    {
+    "id": 121,
+    "topic": "Branch & Bound",
+    "algorithm": "Knapsack 01",
+    "difficulty": "Easy",
+    "question": "What is the basic concept of the 0/1 Knapsack problem?",
+    "options": [
+      "Selecting items with binary choice (take or leave) to maximize value within weight limit",
+      "Sorting items by weight",
+      "Finding the shortest path in a graph",
+      "Minimizing the number of items"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The 0/1 Knapsack problem involves making binary (yes/no) decisions for each item to maximize total value while respecting weight constraints."
+  },
+  {
+    "id": 122,
+    "topic": "Branch & Bound",
+    "algorithm": "Knapsack 01",
+    "difficulty": "Easy",
+    "question": "What is the role of bounding in the Knapsack problem?",
+    "options": [
+      "To estimate the best possible value achievable in a subtree",
+      "To sort items by weight",
+      "To count the number of items",
+      "To calculate the minimum weight"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Bounding functions estimate the maximum possible value achievable in a branch, helping prune unpromising paths."
+  },
+  {
+    "id": 123,
+    "topic": "Branch & Bound",
+    "algorithm": "Knapsack 01",
+    "difficulty": "Medium",
+    "question": "How does Branch & Bound improve upon brute force for the Knapsack problem?",
+    "options": [
+      "By pruning branches that cannot lead to better solutions",
+      "By sorting items first",
+      "By using dynamic programming",
+      "By using greedy selection"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Branch & Bound improves efficiency by eliminating branches that cannot produce better solutions than the current best."
+  },
+  {
+    "id": 124,
+    "topic": "Branch & Bound",
+    "algorithm": "Knapsack 01",
+    "difficulty": "Medium",
+    "question": "What is the most effective bounding function for the Knapsack problem?",
+    "options": [
+      "Fractional knapsack value",
+      "Total weight",
+      "Item count",
+      "Random estimation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The fractional knapsack solution provides an optimistic estimate of the best possible value achievable in a branch."
+  },
+  {
+    "id": 125,
+    "topic": "Branch & Bound",
+    "algorithm": "Knapsack 01",
+    "difficulty": "Hard",
+    "question": "What is the worst-case time complexity of Branch & Bound for Knapsack?",
+    "options": [
+      "O(2\u207f)",
+      "O(n log n)",
+      "O(n)",
+      "O(n\u00b2)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "In the worst case, Branch & Bound might still need to explore all possible combinations, leading to O(2\u207f)."
+  },
+  {
+    "id": 126,
+    "topic": "Branch & Bound",
+    "algorithm": "Knapsack 01",
+    "difficulty": "Hard",
+    "question": "How does the ordering of items affect Knapsack Branch & Bound efficiency?",
+    "options": [
+      "Sorting by value/weight ratio can improve pruning effectiveness",
+      "Order doesn't matter",
+      "Random ordering is best",
+      "Sorting by weight only is optimal"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Sorting items by value/weight ratio can help find good solutions early, enabling more effective pruning."
+  },
+  {
+    "id": 127,
+    "topic": "Branch & Bound",
+    "algorithm": "Traveling Salesman",
+    "difficulty": "Easy",
+    "question": "What is the basic idea of TSP Branch & Bound?",
+    "options": [
+      "Finding the shortest tour visiting all cities exactly once",
+      "Finding the longest path",
+      "Finding all possible paths",
+      "Finding multiple tours"
+    ],
+    "correctAnswer": 0,
+    "explanation": "TSP aims to find the minimum cost tour that visits each city exactly once and returns to the starting city."
+  },
+  {
+    "id": 128,
+    "topic": "Branch & Bound",
+    "algorithm": "Traveling Salesman",
+    "difficulty": "Easy",
+    "question": "What is a lower bound in TSP Branch & Bound?",
+    "options": [
+      "Minimum possible cost of completing a partial tour",
+      "Maximum possible tour length",
+      "Number of cities",
+      "Average distance between cities"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A lower bound estimates the minimum possible cost to complete a partial tour, used for pruning unpromising branches."
+  },
+  {
+    "id": 129,
+    "topic": "Branch & Bound",
+    "algorithm": "Traveling Salesman",
+    "difficulty": "Medium",
+    "question": "What is the role of the reduced cost matrix in TSP?",
+    "options": [
+      "To provide better lower bounds for partial solutions",
+      "To increase the tour length",
+      "To count cities",
+      "To maximize distance"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The reduced cost matrix helps calculate tighter lower bounds, making branch pruning more effective."
+  },
+  {
+    "id": 130,
+    "topic": "Branch & Bound",
+    "algorithm": "Traveling Salesman",
+    "difficulty": "Medium",
+    "question": "How are subtours eliminated in TSP Branch & Bound?",
+    "options": [
+      "By maintaining a path and checking for cycles",
+      "By increasing distances",
+      "By removing cities",
+      "By adding random edges"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The algorithm maintains a valid path and ensures no cycles are formed until the final edge of the tour."
+  },
+  {
+    "id": 131,
+    "topic": "Branch & Bound",
+    "algorithm": "Traveling Salesman",
+    "difficulty": "Hard",
+    "question": "What is the most effective branching strategy for TSP?",
+    "options": [
+      "Selecting cities based on minimum cost edges",
+      "Random selection",
+      "Maximum cost edges",
+      "Middle edges"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Choosing cities connected by minimum cost edges first often leads to better solutions earlier."
+  },
+  {
+    "id": 132,
+    "topic": "Branch & Bound",
+    "algorithm": "Traveling Salesman",
+    "difficulty": "Hard",
+    "question": "What makes TSP particularly challenging for Branch & Bound?",
+    "options": [
+      "The combination of tour constraints and optimization",
+      "The number of cities",
+      "The distance calculation",
+      "The path finding"
+    ],
+    "correctAnswer": 0,
+    "explanation": "TSP combines the challenges of maintaining valid tours while optimizing the total cost, making effective pruning crucial."
+  },
+  {
+    "id": 133,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Minimax",
+    "difficulty": "Easy",
+    "question": "What is the fundamental principle of the Minimax algorithm?",
+    "options": [
+      "Alternating between maximizing and minimizing player moves",
+      "Always choosing random moves",
+      "Always selecting the first available move",
+      "Ignoring opponent moves"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Minimax alternates between maximizing the current player's position and minimizing the opponent's opportunities."
+  },
+  {
+    "id": 134,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Minimax",
+    "difficulty": "Easy",
+    "question": "What type of games is Minimax best suited for?",
+    "options": [
+      "Two-player, zero-sum games with perfect information",
+      "Single-player games",
+      "Games of chance",
+      "Multiplayer games"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Minimax works best for games like chess or tic-tac-toe where two players compete and all information is visible."
+  },
+  {
+    "id": 135,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Minimax",
+    "difficulty": "Medium",
+    "question": "How does Minimax handle game tree depth limitations?",
+    "options": [
+      "Using evaluation functions at cutoff depth",
+      "Ignoring deeper nodes",
+      "Random selection",
+      "Continuing indefinitely"
+    ],
+    "correctAnswer": 0,
+    "explanation": "When the search can't reach terminal positions, Minimax uses heuristic evaluation functions to estimate position value."
+  },
+  {
+    "id": 136,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Minimax",
+    "difficulty": "Medium",
+    "question": "What determines the effectiveness of a Minimax evaluation function?",
+    "options": [
+      "Its ability to accurately estimate position strength",
+      "The speed of calculation",
+      "The number of moves considered",
+      "The game tree depth"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A good evaluation function must provide reliable estimates of position strength to make effective decisions."
+  },
+  {
+    "id": 137,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Minimax",
+    "difficulty": "Hard",
+    "question": "What is the time complexity of Minimax without pruning?",
+    "options": [
+      "O(b\u1d48) where b is branching factor and d is depth",
+      "O(n)",
+      "O(log n)",
+      "O(n\u00b2)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Minimax must explore all possible moves to a given depth, leading to exponential time complexity."
+  },
+  {
+    "id": 138,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Minimax",
+    "difficulty": "Hard",
+    "question": "How does Minimax handle transpositions in the game tree?",
+    "options": [
+      "Using a transposition table to cache results",
+      "Recalculating every position",
+      "Ignoring repeated positions",
+      "Random selection"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Transposition tables store previously evaluated positions to avoid redundant calculations."
+  },
+  {
+    "id": 139,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Alpha-Beta",
+    "difficulty": "Easy",
+    "question": "What is the main purpose of Alpha-Beta pruning?",
+    "options": [
+      "To reduce the number of nodes evaluated by Minimax",
+      "To increase search depth",
+      "To evaluate more nodes",
+      "To randomize search"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Alpha-Beta pruning improves Minimax efficiency by skipping evaluation of irrelevant branches."
+  },
+  {
+    "id": 140,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Alpha-Beta",
+    "difficulty": "Easy",
+    "question": "What do Alpha and Beta values represent?",
+    "options": [
+      "Best already explored alternatives for both players",
+      "Random values",
+      "Node depths",
+      "Number of moves"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Alpha represents the best value for the maximizing player, Beta for the minimizing player."
+  },
+  {
+    "id": 141,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Alpha-Beta",
+    "difficulty": "Medium",
+    "question": "How does move ordering affect Alpha-Beta efficiency?",
+    "options": [
+      "Good move ordering increases pruning opportunities",
+      "Move order doesn't matter",
+      "Random ordering is best",
+      "Worst moves should be first"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Examining better moves first increases the likelihood of pruning subsequent branches."
+  },
+  {
+    "id": 142,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Alpha-Beta",
+    "difficulty": "Medium",
+    "question": "What is a null window search in Alpha-Beta?",
+    "options": [
+      "A search with Alpha and Beta values very close together",
+      "A search with no pruning",
+      "A random search",
+      "A complete tree search"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Null window searches are used to efficiently determine if a position is above or below a specific value."
+  },
+  {
+    "id": 143,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Alpha-Beta",
+    "difficulty": "Hard",
+    "question": "What is the best-case time complexity of Alpha-Beta?",
+    "options": [
+      "O(b\u1d48/\u00b2) where b is branching factor and d is depth",
+      "O(b\u1d48)",
+      "O(n)",
+      "O(log n)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "With perfect move ordering, Alpha-Beta can reduce the effective branching factor by roughly its square root."
+  },
+  {
+    "id": 144,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Alpha-Beta",
+    "difficulty": "Hard",
+    "question": "How can iterative deepening improve Alpha-Beta pruning?",
+    "options": [
+      "By providing move ordering information for deeper searches",
+      "By reducing search depth",
+      "By increasing branching factor",
+      "By randomizing search"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Results from shallower searches can guide move ordering in deeper searches, improving pruning efficiency."
+  },
+  {
+    "id": 145,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Expectimax",
+    "difficulty": "Easy",
+    "question": "What type of games is Expectimax designed for?",
+    "options": [
+      "Games with chance elements or uncertainty",
+      "Perfect information games",
+      "Two-player games only",
+      "Single-player games"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Expectimax handles games where some outcomes are determined by chance or probability."
+  },
+  {
+    "id": 146,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Expectimax",
+    "difficulty": "Easy",
+    "question": "How does Expectimax differ from Minimax?",
+    "options": [
+      "It uses probability-weighted averages instead of minimizing",
+      "It searches deeper",
+      "It uses no heuristics",
+      "It's always faster"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Expectimax accounts for chance events by calculating expected values rather than assuming optimal opponent play."
+  },
+  {
+    "id": 147,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Expectimax",
+    "difficulty": "Medium",
+    "question": "How are chance nodes handled in Expectimax?",
+    "options": [
+      "By computing weighted averages of all possible outcomes",
+      "By choosing the highest value",
+      "By choosing the lowest value",
+      "By random selection"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Chance nodes compute the expected value by weighing each possible outcome by its probability."
+  },
+  {
+    "id": 148,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Expectimax",
+    "difficulty": "Medium",
+    "question": "What is the impact of depth on Expectimax computational cost?",
+    "options": [
+      "It grows exponentially with both branching factor and chance outcomes",
+      "It's constant",
+      "It grows linearly",
+      "It decreases with depth"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Each level of depth multiplies the computation by both the branching factor and number of chance outcomes."
+  },
+  {
+    "id": 149,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Expectimax",
+    "difficulty": "Hard",
+    "question": "Why can't alpha-beta pruning be fully applied to Expectimax?",
+    "options": [
+      "Because chance nodes must consider all outcomes",
+      "Because it's not needed",
+      "Because it makes it slower",
+      "Because it's too complex"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Chance nodes must evaluate all possibilities to compute the correct expected value, preventing full pruning."
+  },
+  {
+    "id": 150,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Expectimax",
+    "difficulty": "Hard",
+    "question": "How can Expectimax be optimized for practical use?",
+    "options": [
+      "By pruning extremely unlikely or low-impact outcomes",
+      "By ignoring probabilities",
+      "By reducing depth",
+      "By increasing branching"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Practical implementations often ignore outcomes with very low probability or minimal impact on the expected value."
+  },
+  {
+    "id": 151,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Monte Carlo Tree",
+    "difficulty": "Easy",
+    "question": "What is the basic idea of Monte Carlo Tree Search (MCTS)?",
+    "options": [
+      "Using random simulations to evaluate positions",
+      "Calculating exact values",
+      "Following fixed strategies",
+      "Ignoring tree structure"
+    ],
+    "correctAnswer": 0,
+    "explanation": "MCTS uses random playouts to estimate position value through statistical sampling."
+  },
+  {
+    "id": 152,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Monte Carlo Tree",
+    "difficulty": "Easy",
+    "question": "What are the four main steps of MCTS?",
+    "options": [
+      "Selection, Expansion, Simulation, Backpropagation",
+      "Search, Evaluate, Update, Repeat",
+      "Choose, Play, Win, Lose",
+      "Start, Middle, End, Reset"
+    ],
+    "correctAnswer": 0,
+    "explanation": "These four steps form the core MCTS algorithm cycle, balancing exploration and exploitation."
+  },
+  {
+    "id": 153,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Monte Carlo Tree",
+    "difficulty": "Medium",
+    "question": "What is the role of UCT in MCTS?",
+    "options": [
+      "Balancing exploration and exploitation",
+      "Speeding up simulations",
+      "Reducing memory usage",
+      "Simplifying the tree"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Upper Confidence bounds for Trees (UCT) helps balance between exploring new nodes and exploiting known good moves."
+  },
+  {
+    "id": 154,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Monte Carlo Tree",
+    "difficulty": "Medium",
+    "question": "How does MCTS handle large branching factors?",
+    "options": [
+      "By gradually building the tree through sampling",
+      "By exploring all branches",
+      "By ignoring some moves",
+      "By random selection"
+    ],
+    "correctAnswer": 0,
+    "explanation": "MCTS manages large branching factors by focusing resources on promising branches identified through sampling."
+  },
+  {
+    "id": 155,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Monte Carlo Tree",
+    "difficulty": "Hard",
+    "question": "What determines the quality of MCTS playouts?",
+    "options": [
+      "The balance between speed and simulation accuracy",
+      "The number of nodes",
+      "The tree depth",
+      "The branching factor"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Good playouts must balance quick execution with reasonable approximation of actual game play."
+  },
+  {
+    "id": 156,
+    "topic": "Game Search Algorithms",
+    "algorithm": "Monte Carlo Tree",
+    "difficulty": "Hard",
+    "question": "How can MCTS be parallelized effectively?",
+    "options": [
+      "By running multiple independent trees or parallel playouts",
+      "It cannot be parallelized",
+      "By splitting the game board",
+      "By reducing search depth"
+    ],
+    "correctAnswer": 0,
+    "explanation": "MCTS can be parallelized through root parallelization, tree parallelization, or leaf parallelization."
+  }
 ]
