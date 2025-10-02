@@ -418,6 +418,7 @@ const Searching = () => {
               <button className="btn btn-secondary" onClick={handlePrevStep} disabled={currentStep === 0}>Previous Step</button>
               <button className="btn btn-secondary" onClick={handleNextStep} disabled={currentStep >= steps.length - 1}>Next Step</button>
             </div>
+            
             <span style={{ color: "var(--theme-text-secondary)", fontWeight: 600, fontSize: "0.9rem" }}>
               Step {currentStep + 1} / {steps.length}
             </span>
@@ -429,9 +430,9 @@ const Searching = () => {
       <div className="form-grid" data-aos="fade-up" data-aos-delay="500">
         <div className="visualization-area" id="search-visualization-container" style={{ gridColumn: 'span 2' }}>
           {/* ⛔️ Removed the duplicate AlgorithmVisualizer */}
-
+          
           {/* ✅ Keep ONLY the step visualization for Binary */}
-          {algorithm === "binarySearch"  && (
+          {algorithm === "binarySearch" && (
             <div
               style={{
                 position: "relative", /* anchor overlay */
@@ -450,6 +451,7 @@ const Searching = () => {
                   const maxBarWidth = isTabletOrBelow ? 20 : 28;
                   const baseWidth = Math.floor((isTabletOrBelow ? 360 : 600) / Math.max(data.length, 1));
                   const barWidth = Math.max(isTabletOrBelow ? 10 : 12, Math.min(maxBarWidth, baseWidth));
+                  const showNumbers = data.length <= 25;
                   const stepColors = steps.length > 0 ? getStepColorArray() : [];
                   const heightPx = Math.max(40, Math.round((num / maxVal) * 200));
                   return (
@@ -476,7 +478,7 @@ const Searching = () => {
                       }}
                       title={`Value: ${num}, Index: ${idx}`}
                     >
-                      {(
+                      {showNumbers && (
                         <div style={{ textShadow: "1px 1px 2px rgba(0,0,0,0.8)", fontWeight: "bold", fontSize: "inherit", minHeight: "14px", display: "flex", alignItems: "center" }}>
                           {num}
                         </div>
@@ -485,12 +487,10 @@ const Searching = () => {
                   );
                 });
               })()}
-            </div>
-          )}
               <div
                 style={{
                   position: "absolute",
-                  top: "30px",
+                  top: "10px",
                   left: "50%",
                   transform: "translateX(-50%)",
                   color: "#66ccff",
@@ -504,6 +504,8 @@ const Searching = () => {
               >
                 Array Size: {steps[currentStep]?.array?.length ?? array.length} | Step Mode
               </div>
+            </div>
+          )}
 
           {algorithm === "binarySearch" && steps[currentStep]?.text && (
             <div style={{ color: "#66ccff", fontWeight: 600, marginTop: "8px" }}>

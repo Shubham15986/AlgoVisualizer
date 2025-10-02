@@ -2,63 +2,35 @@ import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import SimpleVisualizationExporter from '../utils/simpleExporter';
 
-// Configuration constants for better maintainability
-const EXPORT_CONFIG = {
-  DEFAULT_CONTAINER_ID: 'visualization-container',
-  RECORDING_INTERVAL: 500,
-  CONTAINER_IDS: [
-    'sort-visualization-container',
-    'search-visualization-container',
-    'ds-visualization-container'
-  ]
-};
-
-// Utility functions for export operations
-const exportUtils = {
-  getTargetContainerId: (containerId, document) => {
-    if (containerId) return containerId;
-    if (typeof document !== 'undefined') {
-      for (const id of EXPORT_CONFIG.CONTAINER_IDS) {
-        if (document.getElementById(id)) return id;
-      }
-    }
-    return EXPORT_CONFIG.DEFAULT_CONTAINER_ID;
-  }
-};
-
-// Message utilities for user feedback
-const messageUtils = {
-  READY: 'Ready to record',
-  RECORDING: 'Recording...',
-  STOPPED: (frames) => `Recording stopped. ${frames} frames captured.`,
-  CREATING_GIF: 'Creating GIF...',
-  GIF_SUCCESS: 'GIF exported successfully!',
-  CREATING_VIDEO: 'Creating video...',
-  VIDEO_SUCCESS: 'Video exported successfully!'
-};
 
 const SimpleExportControls = ({ containerId }) => {
   const [exporter] = useState(() => new SimpleVisualizationExporter());
   const [isRecording, setIsRecording] = useState(false);
   const [frameCount, setFrameCount] = useState(0);
-  const [message, setMessage] = useState(messageUtils.READY);
+  const [message, setMessage] = useState('Ready to record');
 
   // choose default container id if not provided
   const targetId = useMemo(() => {
-    return exportUtils.getTargetContainerId(containerId, document);
+    if (containerId) return containerId;
+    if (typeof document !== 'undefined') {
+      if (document.getElementById('sort-visualization-container')) return 'sort-visualization-container';
+      if (document.getElementById('search-visualization-container')) return 'search-visualization-container';
+      if (document.getElementById('ds-visualization-container')) return 'ds-visualization-container';
+    }
+    return 'visualization-container';
   }, [containerId]);
 
   const handleStartRecording = () => {
-    setMessage(messageUtils.RECORDING);
+    setMessage('Recording...');
     setIsRecording(true);
     setFrameCount(0);
 
-    exporter.startRecording(EXPORT_CONFIG.RECORDING_INTERVAL, targetId);
+  exporter.startRecording(500, targetId); // Capture every 500ms targeting correct container
 
     // Update frame count periodically
     const updateInterval = setInterval(() => {
       setFrameCount(exporter.frames.length);
-    }, EXPORT_CONFIG.RECORDING_INTERVAL);
+    }, 500);
     // Store interval for cleanup
     exporter.updateInterval = updateInterval;
   };
@@ -70,27 +42,29 @@ const SimpleExportControls = ({ containerId }) => {
     const totalFrames = exporter.stopRecording();
     setIsRecording(false);
     setFrameCount(totalFrames);
-    setMessage(messageUtils.STOPPED(totalFrames));
+    setMessage(`Recording stopped. ${totalFrames} frames captured.`);
   };
-  
   const handleExportGIF = () => {
-    setMessage(messageUtils.CREATING_GIF);
+    setMessage('Creating GIF...');
     exporter.exportAsGIF();
-    setMessage(messageUtils.GIF_SUCCESS);
+    setMessage('GIF exported successfully!');
   };
 
   const handleExportVideo = () => {
-    setMessage(messageUtils.CREATING_VIDEO);
+    setMessage('Creating video...');
     exporter.exportAsVideo();
-    setMessage(messageUtils.VIDEO_SUCCESS);
+    setMessage('Video exported successfully!');
   };
 
   return (
+    // ✅ MODIFIED: Switched to the standard .theme-card class
     <div className="theme-card" style={{ textAlign: 'center' }}>
       <div className="theme-card-header">
+        {/* ✅ MODIFIED: Removed inline style */}
         <h3>Export Visualization</h3>
       </div>
       
+      {/* ✅ MODIFIED: Used theme variables for text color */}
       <p style={{ color: 'var(--theme-text-secondary)', margin: '0 0 1rem 0' }}>{message}</p>
       {frameCount > 0 && (
         <p style={{ color: 'var(--theme-accent)', fontSize: '0.9rem', marginTop: 0 }}>Frames captured: {frameCount}</p>
@@ -101,15 +75,15 @@ const SimpleExportControls = ({ containerId }) => {
           <button
             className="btn btn-primary" 
             onClick={handleStartRecording}
-            style={{ backgroundColor: 'var(--theme-status-success)', borderColor: 'var(--theme-status-success)' }}
+            style={{ backgroundColor: 'var(--theme-status-success)', borderColor: 'var(--theme-status-success)' }} // Keep brand color for start
           >
-            Start Recording
+            Start Recording.
           </button>
         ) : (
           <button
             className="btn btn-primary" 
             onClick={handleStopRecording}
-            style={{ backgroundColor: 'var(--theme-status-danger)', borderColor: 'var(--theme-status-danger)' }}
+            style={{ backgroundColor: 'var(--theme-status-danger)', borderColor: 'var(--theme-status-danger)' }} // Keep brand color for stop
           >
             Stop Recording
           </button>
@@ -133,6 +107,7 @@ const SimpleExportControls = ({ containerId }) => {
         </div>
       </div>
 
+      {/* ✅ MODIFIED: Used theme variables for instruction text color */}
       <div style={{ marginTop: '1.5rem', fontSize: '0.8rem', color: 'var(--theme-text-muted)', lineHeight: 1.5 }}>
         <div>**Instructions:**</div>
         <div>1. Click "Start Recording" before running your algorithm</div>

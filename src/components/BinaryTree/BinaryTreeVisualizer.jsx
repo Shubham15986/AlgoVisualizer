@@ -24,7 +24,6 @@ export default function BinaryTreeVisualizer() {
 
   // textual traversal order
   const [order, setOrder] = useState([]);
-  
 
   // id generator
   const idCounter = useRef(1);

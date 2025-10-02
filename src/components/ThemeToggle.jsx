@@ -62,7 +62,7 @@ const ThemeToggle = () => {
 
     return (
         <>
-            <style>{`
+            <style jsx>{`
                 .theme-toggle-container {
                     ${Object.entries(getContainerStyles()).map(([key, value]) => 
                       `${key.replace(/([A-Z])/g, '-$1').toLowerCase()}: ${value};`).join('\n                    ')}

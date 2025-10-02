@@ -84,8 +84,6 @@ import "aos/dist/aos.css";
 import "./styles/components.css";
 import "./styles/footer-improved.css";
 import LearnLanding from "./pages/LearnLanding";
-import DSDocumentation from "./pages/DSDocumentation";
-
 
 const App = () => {
   const location = useLocation();
@@ -184,9 +182,6 @@ const App = () => {
               <Route path="/branchbound" element={<BranchBoundPage />} />
               <Route path="/string-overview" element={<StringOverview />} />
               <Route path="/string" element={<StringPage />} />
-              {/* Data Structures Documentation */}
-<Route path="/data-structures-docs" element={<DSDocumentation />} />
-
 
               {/* Other Pages */}
               <Route path="/quiz" element={<Quiz />} />
